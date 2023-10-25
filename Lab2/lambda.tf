@@ -15,7 +15,7 @@ resource "aws_iam_role" "sample_role" {
 
 resource "aws_iam_role_policy_attachment" "sample_aws_managed_policy_attachment" {
     role = aws_iam_role.sample_role.name
-    policy_arn = data.aws_iam_policy.lambda-basic-execution
+    policy_arn = data.aws_iam_policy.lambda-basic-execution.arn
 }
 
 resource "aws_cloudwatch_log_group" "sample_log_group" {
